@@ -2,10 +2,12 @@
 # boost::optional
 #
 
-file(GLOB_RECURSE BOOST_OPTIONAL_HEADERS
-		"[^.]*.(h|hpp)"
+install(FILES
+	"none.hpp" "none_t.hpp" "optional.hpp"
+	DESTINATION ${INSTALL_DESTINATION}/optional
 	)
 
-install(FILES ${BOOST_OPTIONAL_HEADERS}
-	DESTINATION ${INSTALL_DESTINATION}
-	)
+install(DIRECTORY "optional"
+	DESTINATION ${INSTALL_DESTINATION}/optional
+    FILES_MATCHING PATTERN "*.hpp"
+    )
