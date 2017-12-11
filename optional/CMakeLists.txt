@@ -1,0 +1,11 @@
+#
+# boost::optional
+#
+
+file(GLOB_RECURSE BOOST_OPTIONAL_HEADERS
+		"[^.]*.(h|hpp)"
+	)
+
+install(FILES ${BOOST_OPTIONAL_HEADERS}
+	DESTINATION ${INSTALL_DESTINATION}
+	)
